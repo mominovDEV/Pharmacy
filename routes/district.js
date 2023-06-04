@@ -14,4 +14,7 @@ router.get("/:id", DistrictController.GetDistrictById);
 // Update district
 router.put("/:id", DistrictController.UpdateDistrict);
 
+// Delete district BY ID
+router.delete("/:id", DistrictController.DeleteDistrict);
+
 module.exports = router;

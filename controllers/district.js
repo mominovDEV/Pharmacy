@@ -70,3 +70,15 @@ exports.UpdateDistrict = (req, res) => {
     }
   );
 };
+
+// Delete a district
+exports.DeleteDistrict = (req, res) => {
+  const districtId = req.params.id;
+  db.query("Delete from district where id=?", [districtId], (error) => {
+    if (error) {
+      console.log("Error deleting District:", error);
+      return res.status(500).json({ error: "INTERNAL SERVER ERROR" });
+    }
+    res.json({ message: "District deleter successfully" });
+  });
+};

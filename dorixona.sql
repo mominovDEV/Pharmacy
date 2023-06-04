@@ -36,7 +36,7 @@ create table medicine(
     medicine_type_id bigint,
     price float,
     expiry_date date,
-    info text
+       text
 );
 
 create table medicine_type(
